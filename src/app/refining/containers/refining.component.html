@@ -27,20 +27,20 @@
     <mat-card class="notice" *ngIf="materials.length === 0">
       <mat-card-title> 주의사항 </mat-card-title>
       <mat-card-content>
-        <h3>가격 정보는 자동으로 갱신되지 않습니다.</h3>
+        <h3>Pricing information is not automatically renewed.</h3>
         <p>
-          며칠 전 시세 정보를 기준으로 임시로 넣어둔 값이며, 변동된 시세에 따른
-          가격은 상단 우측 "거래소 가격 검색" 기능을 사용하시거나 직접 계산해서
-          기입하시는 것이 정확합니다. 모든 재료의 가격은 1개당 골드로 입력되니,
-          수호석 결정과 같이 10개 단위로 거래되는 재료들의 수치 입력에
-          주의해주세요.
+          This is a temporary value based on the price information a few days ago.
+          You can find the price by using the "Exchange price search" function on the top right or by calculating it yourself.
+          Your entry is correct. The price of all materials is entered in gold per piece,
+          For the numerical input of materials traded in units of 10, such as guardian stone crystals,
+          Please be careful.
         </p>
         <h3>숨결은 0개 혹은 최대치로만 투입합니다.</h3>
         <p>
-          숨결을 일부만 투입하는 경우까지 고려하면 연산량이 지나치게 많아집니다.
-          걸립니다. 따라서 각 재료별로 0개 혹은 최대치 투입 2가지 경우의 수만
-          고려하고 있습니다. 이로 인해 귀속 숨결을 0골드로 계산할 시 약간의
-          오차가 발생할 수 있습니다.
+          Considering the case of using only a portion of the breath, the amount of computation is too high.
+          It takes. Therefore, only the number of cases of 0 or maximum input for each material
+          are considering. Because of this, when counting Bind Breath for 0 gold,
+          Errors may occur.
         </p>
         <h3>22단계 이상의 재련에서 렉이 걸릴 수 있습니다.</h3>
         <p>

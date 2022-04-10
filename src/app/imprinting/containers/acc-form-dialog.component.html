@@ -1,19 +1,19 @@
-<h1 mat-dialog-title>아이템 추가</h1>
+<h1 mat-dialog-title>Add item</h1>
 <div mat-dialog-content>
   <div>
     <mat-form-field class="w-240">
-      <mat-label>부위</mat-label>
+      <mat-label>region</mat-label>
       <mat-select [(ngModel)]="accMap.category">
-        <mat-option value="목걸이"> 목걸이 </mat-option>
-        <mat-option value="귀걸이"> 귀걸이 </mat-option>
-        <mat-option value="반지"> 반지 </mat-option>
+        <mat-option value="Necklace"> Necklace </mat-option>
+        <mat-option value="earring"> earrings </mat-option>
+        <mat-option value="Ring"> Ring </mat-option>
       </mat-select>
     </mat-form-field>
   </div>
 
   <div>
     <mat-form-field class="w-240">
-      <mat-label>아이템명</mat-label>
+      <mat-label>Item name</mat-label>
       <input
         [(ngModel)]="accMap.name"
         type="text"
@@ -34,7 +34,7 @@
 
   <div>
     <mat-form-field class="w-240">
-      <mat-label>품질</mat-label>
+      <mat-label>Quality</mat-label>
       <input
         [(ngModel)]="accMap.quality"
         matInput
@@ -46,7 +46,7 @@
 
   <div>
     <mat-form-field class="w-192">
-      <mat-label>전투특성1</mat-label>
+      <mat-label>Combat Traits 1</mat-label>
       <mat-select [(ngModel)]="accMap.dealOption1[0]">
         <mat-option *ngFor="let option of dealOptions" [value]="option">
           {{ option }}
@@ -54,7 +54,7 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="w-48">
-      <mat-label>수치</mat-label>
+      <mat-label>Number</mat-label>
       <input
         [(ngModel)]="accMap.dealOption1[1]"
         matInput
@@ -64,9 +64,9 @@
     </mat-form-field>
   </div>
 
-  <div *ngIf="accMap.category === '목걸이'">
+  <div *ngIf="accMap.category === 'Necklace'">
     <mat-form-field class="w-192">
-      <mat-label>전투특성2</mat-label>
+      <mat-label>Combat Traits 2</mat-label>
       <mat-select [(ngModel)]="accMap.dealOption2![0]">
         <mat-option *ngFor="let option of dealOptions" [value]="option">
           {{ option }}
@@ -74,7 +74,7 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="w-48">
-      <mat-label>수치</mat-label>
+      <mat-label>Number</mat-label>
       <input
         [(ngModel)]="accMap.dealOption2![1]"
         matInput
@@ -86,7 +86,7 @@
 
   <div>
     <mat-form-field class="w-192">
-      <mat-label>각인1</mat-label>
+      <mat-label>Engraving 1</mat-label>
       <input
         [(ngModel)]="accMap.imprintOption1[0]"
         type="text"
@@ -104,7 +104,7 @@
       </mat-autocomplete>
     </mat-form-field>
     <mat-form-field class="w-48">
-      <mat-label>수치</mat-label>
+      <mat-label>Number</mat-label>
       <input
         [(ngModel)]="accMap.imprintOption1[1]"
         matInput
@@ -116,7 +116,7 @@
 
   <div>
     <mat-form-field class="w-192">
-      <mat-label>각인2</mat-label>
+      <mat-label>Engraving 2</mat-label>
       <input
         [(ngModel)]="accMap.imprintOption2[0]"
         type="text"
@@ -134,7 +134,7 @@
       </mat-autocomplete>
     </mat-form-field>
     <mat-form-field class="w-48">
-      <mat-label>수치</mat-label>
+      <mat-label>Number</mat-label>
       <input
         [(ngModel)]="accMap.imprintOption2[1]"
         matInput
@@ -146,7 +146,7 @@
 
   <div>
     <mat-form-field class="w-192">
-      <mat-label>감소각인</mat-label>
+      <mat-label>Reduced engraving</mat-label>
       <mat-select [(ngModel)]="accMap.imprintPenalty[0]">
         <mat-option *ngFor="let option of penaltyOptions" [value]="option">
           {{ option }}
@@ -154,7 +154,7 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field class="w-48">
-      <mat-label>수치</mat-label>
+      <mat-label>Number</mat-label>
       <input
         [(ngModel)]="accMap.imprintPenalty[1]"
         matInput
@@ -167,7 +167,7 @@
 
 <div>
   <mat-form-field class="w-240">
-    <mat-label>가격</mat-label>
+    <mat-label>Price</mat-label>
     <input
       [(ngModel)]="price"
       matInput
@@ -175,11 +175,11 @@
       type="number"
       appSelectOnFocus
     />
-    <span matSuffix>골드</span>
+    <span matSuffix>Gold</span>
   </mat-form-field>
 </div>
 
 <div mat-dialog-actions>
-  <button color="primary" mat-flat-button (click)="onSubmit()">저장</button>
-  <button mat-stroked-button (click)="onCancel()">취소</button>
+  <button color="primary" mat-flat-button (click)="onSubmit()">Save</button>
+  <button mat-stroked-button (click)="onCancel()">Cancel</button>
 </div>

@@ -232,7 +232,7 @@ export class ImprintingComponent implements OnInit {
       }
       this.filter.exclude = new Set();
     } else {
-      this.snackbar.open('검색 코드 복사에 실패했습니다.', '닫기');
+      this.snackbar.open('Failed to copy search code', 'Close');
     }
   }
 
@@ -275,7 +275,7 @@ export class ImprintingComponent implements OnInit {
         this.applySearchResult();
       }
     } else {
-      this.snackbar.open('검색 코드 복사에 실패했습니다.', '닫기');
+      this.snackbar.open('Failed to copy search code', 'Close');
     }
   }
 

@@ -1,14 +1,14 @@
 <table class="mat-table mat-elevation-z1">
   <thead>
     <tr class="mat-header-row">
-      <th class="mat-header-cell">부위</th>
-      <th class="mat-header-cell">품질</th>
-      <th class="mat-header-cell">전투특성1</th>
-      <th class="mat-header-cell">전투특성2</th>
-      <th class="mat-header-cell">아이템명</th>
-      <th class="mat-header-cell">각인1</th>
-      <th class="mat-header-cell">각인2</th>
-      <th class="mat-header-cell">감소각인</th>
+      <th class="mat-header-cell">region</th>
+      <th class="mat-header-cell">Quality</th>
+      <th class="mat-header-cell">Combat Traits 1</th>
+      <th class="mat-header-cell">Combat Traits 2</th>
+      <th class="mat-header-cell">item name</th>
+      <th class="mat-header-cell">Engraving 1</th>
+      <th class="mat-header-cell">Engraving 2</th>
+      <th class="mat-header-cell">Reduced engraving</th>
     </tr>
   </thead>
   <tbody>
@@ -19,7 +19,7 @@
       <td class="mat-cell">{{ accType }}</td>
       <td class="mat-cell">
         <mat-form-field class="w-48" floatLabel="never">
-          <mat-label>수치</mat-label>
+          <mat-label>shame</mat-label>
           <input
             [(ngModel)]="accMap[accType].quality"
             matInput
